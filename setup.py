@@ -14,6 +14,12 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/tiagoft/hello_world",  # URL do repositório do seu projeto (se houver)
     packages=find_packages(),  # Encontra automaticamente todos os pacotes no diretório
+    package_data={
+    '': [
+        'assets/*.txt',
+    ],
+    },
+    include_package_data=True,
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
