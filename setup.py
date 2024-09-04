@@ -5,14 +5,14 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="hello_world",  # Substitua pelo nome do seu pacote
+    name="enigma",  # Substitua pelo nome do seu pacote
     version="0.1.0",
-    author="Tiago Tavares",
-    author_email="tiagoft@gmail.com",
-    description="Um pacote minimalista em python",
+    author="João Gabriel Faraco e Caio Liberal",
+    author_email="jgffaraco@gmail.com",
+    description="Um projeto que tenta emitiar a codificação enigma",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/Joao-Gabriel05/hello_world",  # URL do repositório do seu projeto (se houver)
+    url="https://github.com/Caiolib/hello_world",  # URL do repositório do seu projeto (se houver)
     packages=find_packages(),  # Encontra automaticamente todos os pacotes no diretório
     package_data={
     '': [
