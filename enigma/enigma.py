@@ -78,11 +78,3 @@ def decriptar_enigma(mensagem_encriptada,P ,Q ):
         mensagem_final += alfabeto[index_letra]  # Converte o índice de volta para um caractere
     
     return mensagem_final
-
-# Example usage
-texto = 'Teste com um texto grande'
-alfabeto = 'abcdefghijklmnopqrstuvwxyz '
-P, R = gerar_matrizes_de_permutacao(len(alfabeto))
-cripto = encriptar_enigma(texto, P, R)
-print(cripto)
-print(decriptar_enigma(cripto,P ,R ))

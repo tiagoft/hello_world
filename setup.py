@@ -12,7 +12,7 @@ setup(
     description="Um pacote minimalista em python",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/tiagoft/hello_world",  # URL do repositório do seu projeto (se houver)
+    url="https://github.com/Joao-Gabriel05/hello_world",  # URL do repositório do seu projeto (se houver)
     packages=find_packages(),  # Encontra automaticamente todos os pacotes no diretório
     package_data={
     '': [
@@ -28,7 +28,7 @@ setup(
     python_requires='>=3.9.6',
     entry_points={
         'console_scripts': [
-            'tiago_hello_world=hello_world.main:main',
+            'enigma=enigma.main:main',
         ],
     },
     install_requires=[  # Instala as dependências especificadas no requirements.txt
