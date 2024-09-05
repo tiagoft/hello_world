@@ -12,17 +12,17 @@ def find_subdir(start_dir):
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-MODULE_STUB = 'hello_world'
+MODULE_STUB = "{{cookiecutter.module_name}}"
 
 setup(
     name=MODULE_STUB,  # Substitua pelo nome do seu pacote
     version="0.1.0",
-    author="Tiago Tavares",
-    author_email="tiagoft@gmail.com",
-    description="Um pacote minimalista em python",
+    author="{{cookiecutter.author_name}}",
+    author_email="{{cookiecutter.author_email}}",
+    description="{{cookiecutter.module_description}}",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/tiagoft/hello_world",  # URL do repositório do seu projeto (se houver)
+    url="https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.module_name}}",  # URL do repositório do seu projeto (se houver)
     packages=find_packages(),  # Encontra automaticamente todos os pacotes no diretório
     package_data={
     '': find_subdir(f'{MODULE_STUB}/assets'),
@@ -36,7 +36,7 @@ setup(
     python_requires='>=3.11',
     entry_points={
         'console_scripts': [
-            f'tiago_hello_world={MODULE_STUB}.main:main',
+            f'{{cookiecutter.module_name}}-cli={MODULE_STUB}.main:main',
         ],
     },
     install_requires=[  # Instala as dependências especificadas no requirements.txt
