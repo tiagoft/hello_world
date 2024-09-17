@@ -35,9 +35,7 @@ if __name__ == "__main__":
     else:
         print("Git is installed.")
 
-    # Load cookiecutter.json
-    with open('cookiecutter.json', 'r') as file:
-        context = json.load(file)
+
 
     git_user_name = get_git_user_name()
     git_user_email = get_git_user_email()
@@ -46,6 +44,10 @@ if __name__ == "__main__":
 
     new_context['author_name'] = git_user_name
     new_context['author_email'] = git_user_email
+
+    # Load cookiecutter.json
+    with open('cookiecutter.json', 'r') as file:
+        context = json.load(file)
 
     context.update(new_context)
 
