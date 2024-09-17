@@ -15,6 +15,6 @@ if __name__ == "__main__":
         sys.exit(1)
     else:
         print("Git is installed.")
-    exit(1)
+
     print("All requirements are met. You can proceed.")
 
