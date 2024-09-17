@@ -38,12 +38,21 @@ if __name__ == "__main__":
 
 
     git_user_name = get_git_user_name()
+    if not git_user_name:
+        print("ERROR: Git user name is not set. Use `git config --global user.name 'Your Name'` before proceeding!")
+        sys.exit(1)
     git_user_email = get_git_user_email()
+    if not git_user_email:
+        print("ERROR: Git user email is not set. Use `git config --global user.email 'Your e-mail` before proceeding!")
+        sys.exit(1)
+        
+    git_username = git_user_email.split('@')[0]
 
     new_context = {}
 
     new_context['author_name'] = git_user_name
     new_context['author_email'] = git_user_email
+    new_context['github_username'] = git_username
 
     # Load cookiecutter.json
     with open('cookiecutter.json', 'r') as file:
