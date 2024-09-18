@@ -7,5 +7,5 @@
     "module_description": "A simple hello world module",
     "python_version": "3.12",
     "github_username": "johndoe",
-    "github_repository": "{{ cookiecutter.project_slug.lower().replace('-', '') }}"
+    "github_repository": "{{ cookiecutter.project_slug }}"
 }
