@@ -9,7 +9,7 @@ def is_git_installed() -> bool:
         return True
     except Exception:
         return False
-    
+
 def get_git_user_name() -> str:
     print("Getting Git user name...")
     try:
