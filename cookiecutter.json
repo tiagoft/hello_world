@@ -2,7 +2,7 @@
     "author_name": "John Doe",
     "author_email": "john@doe",
     "module_name": "My Awesome Project",
-    "project_slug": "{{ cookiecutter.module_name.lower().replace(' ', '-') }}",
+    "project_slug": "{{ cookiecutter.module_name.lower().replace(' ', '_').replace('-', '_') }}",
     "version": "0.1.0",
     "module_description": "A simple hello world module",
     "python_version": "3.12",

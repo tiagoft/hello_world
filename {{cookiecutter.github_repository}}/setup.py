@@ -12,10 +12,11 @@ def find_subdir(start_dir):
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-MODULE_STUB = "{{cookiecutter.module_name}}"
+MODULE_SLUG = "{{cookiecutter.project_slug}}"
 
 setup(
-    name=MODULE_STUB,  # Substitua pelo nome do seu pacote
+    name=MODULE_SLUG = "{{cookiecutter.project_slug}}"
+,  # Substitua pelo nome do seu pacote
     version="0.1.0",
     author="{{cookiecutter.author_name}}",
     author_email="{{cookiecutter.author_email}}",
@@ -25,7 +26,7 @@ setup(
     url="https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.module_name}}",  # URL do repositório do seu projeto (se houver)
     packages=find_packages(),  # Encontra automaticamente todos os pacotes no diretório
     package_data={
-    '': find_subdir(f'{MODULE_STUB}/assets'),
+    '': find_subdir(f'{MODULE_SLUG}/assets'),
     },
     include_package_data=True,
     classifiers=[
@@ -33,10 +34,10 @@ setup(
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Operating System :: OS Independent",
     ],
-    python_requires='>=3.11',
+    python_requires='>={{ cookiecutter.python_version }}',
     entry_points={
         'console_scripts': [
-            f'{{cookiecutter.module_name}}-cli={MODULE_STUB}.main:app',
+            f'{{cookiecutter.project_slug}}-cli={MODULE_SLUG}.main:app',
         ],
     },
     install_requires=[  # Instala as dependências especificadas no requirements.txt
