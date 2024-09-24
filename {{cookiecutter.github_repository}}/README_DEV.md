@@ -7,12 +7,12 @@ Execute estas instruçõess imediatamente após criar seu projeto com o cookiecu
 
 1. Navegue para o diretório que você criou
 
-        cd {{cookiecutter.module_slug}}
+        cd {{cookiecutter.project_slug}}
 
 2. Crie um ambiente virtual para seu desenvolvimento:
 
-        conda create -n {{cookiecutter.module_slug}} python={{cookiecutter.python_version}}
-        conda activate {{cookiecutter.module_slug}}
+        conda create -n {{cookiecutter.project_slug}} python={{cookiecutter.python_version}}
+        conda activate {{cookiecutter.project_slug}}
 
 3. (opcional) Instale o aplicativo `gh` para criar automaticamente seu repositório no GitHub:
 
@@ -25,7 +25,7 @@ Execute estas instruçõess imediatamente após criar seu projeto com o cookiecu
 
 5. Verifique que a ferramenta de linha de comando está funcionando:
 
-        {{cookiecutter.module_slug}}-cli --help
+        {{cookiecutter.project_slug}}-cli --help
 
 ## Sincronizando com Github
 

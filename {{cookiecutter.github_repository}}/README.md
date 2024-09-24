@@ -8,8 +8,8 @@ Se você vai *desenvolver* deste repositório, vá para o [guia de desenvolvimen
 
 Lembre-se de seguir essas instruções de dentro do seu ambiente virtual preferido:
 
-    conda create -n {{cookiecutter.module_slug}} python={{cookiecutter.python_version}}
-    conda activate {{cookiecutter.module_slug}}
+    conda create -n {{cookiecutter.project_slug}} python={{cookiecutter.python_version}}
+    conda activate {{cookiecutter.project_slug}}
 
 A primeira maneira é clonar o repositório e fazer uma instalação local:
 
@@ -26,5 +26,5 @@ A segunda maneira é instalar diretamente
 
 Para encontrar todos os comandos implementados, execute:
 
-    {{cookiecutter.module_slug}}-cli --help
+    {{cookiecutter.project_slug}}-cli --help
 
