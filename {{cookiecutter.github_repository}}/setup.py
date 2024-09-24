@@ -15,8 +15,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 MODULE_SLUG = "{{cookiecutter.project_slug}}"
 
 setup(
-    name=MODULE_SLUG = "{{cookiecutter.project_slug}}"
-,  # Substitua pelo nome do seu pacote
+    name=MODULE_SLUG,
     version="0.1.0",
     author="{{cookiecutter.author_name}}",
     author_email="{{cookiecutter.author_email}}",
