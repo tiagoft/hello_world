@@ -25,10 +25,10 @@ def check_if_repository_exists_and_is_empty() -> int:
 if __name__ == "__main__":
     status = check_if_repository_exists_and_is_empty()
     if status == ERROR_REPO_DOES_NOT_EXIST:
-        print(f"ERROR: Repository does not exist.\nPlease create repository {repo} on GitHub before proceeding!")
-        sys.exit(1)
+        print(f"WARNING: Repository does not exist.\nPlease create repository {repo} on GitHub before proceeding!")
+        print(f"Visit https://github.com/{{ cookiecutter.github_username }}")
+        print(f"or use the GitHub CLI: gh repo create {{ cookiecutter.github_repository }}")
     elif status == ERROR_REPO_NOT_EMPTY:
-        print(f"ERROR: Repository is not empty. Please delete and restart repository {repo} on GitHub before proceeding!")
-        sys.exit(1)
-
-    print("All requirements are met. You can proceed.")
+        print(f"WARNING: Repository is not empty. Please delete and restart repository {repo} on GitHub before proceeding!")
+        
+    print("Proceeding with creating the directory.")
