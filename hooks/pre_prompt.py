@@ -32,7 +32,9 @@ def get_python_version() -> str:
     print("Checking Python version...")
     try:
         result = subprocess.run(["python", "--version"], capture_output=True, check=True, text=True)
-        return result.stdout.strip()
+        version = result.stdout.strip()
+        version = '.'.join(version.split(' ')[1].split('.')[0:2])
+        return version
     except:
         print("ERROR: Unable to get Python version.")
         return False
