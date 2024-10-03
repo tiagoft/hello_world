@@ -28,6 +28,17 @@ def get_git_user_email() -> str:
         print(f"ERROR: Unable to get Git user email. {e}")
         return False
 
+def get_python_version() -> str:
+    print("Checking Python version...")
+    try:
+        result = subprocess.run(["python", "--version"], capture_output=True, check=True, text=True)
+        version = result.stdout.strip()
+        version = '.'.join(version.split(' ')[1].split('.')[0:2])
+        return version
+    except:
+        print("ERROR: Unable to get Python version.")
+        return False
+
 if __name__ == "__main__":
     if not is_git_installed():
         print("ERROR: Git is not installed. Use `apt install git` before proceeding!")
@@ -47,6 +58,9 @@ if __name__ == "__main__":
 
         git_username = git_user_email.split('@')[0]
         new_context['github_username'] = git_username
+
+    python_version = get_python_version()
+    new_context['python_version'] = python_version
 
     # Load cookiecutter.json
     with open('cookiecutter.json', 'r') as file:

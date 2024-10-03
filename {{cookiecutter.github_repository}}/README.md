@@ -21,6 +21,9 @@ A segunda maneira é instalar diretamente
 
     pip install git+https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.github_repository}}.git
 
+Para desinstalar, use:
+
+    pip uninstall install {{cookiecutter.project_slug}}
 
 ## Uso
 
