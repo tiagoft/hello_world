@@ -23,7 +23,7 @@ A segunda maneira é instalar diretamente
 
 Para desinstalar, use:
 
-    pip uninstall install {{cookiecutter.project_slug}}
+    pip uninstall {{cookiecutter.project_slug}}
 
 ## Uso
 
