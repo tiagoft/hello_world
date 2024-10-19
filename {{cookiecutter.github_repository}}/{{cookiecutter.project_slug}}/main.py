@@ -1,8 +1,8 @@
-import {{cookiecutter.project_slug}} as {{cookiecutter.module_abbreviation}}
 import os
 from pathlib import Path
 from rich.console import Console
 import typer
+import {{cookiecutter.project_slug}} as {{cookiecutter.module_abbreviation}}
 
 app = typer.Typer(no_args_is_help=True)
 console = Console()
