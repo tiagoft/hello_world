@@ -1,4 +1,4 @@
-import {{cookiecutter.project_slug}}
+import {{cookiecutter.project_slug}} as {{cookiecutter.module_abbreviation}}
 import os
 from pathlib import Path
 from rich.console import Console
@@ -13,18 +13,18 @@ def print_info(custom_message : str = ""):
     Print information about the module
     """
     console.print("Hello! I am {{cookiecutter.module_name}}")
-    console.print(f"Author: { {{cookiecutter.project_slug}}.__author__}")
-    console.print(f"Version: { {{cookiecutter.project_slug}}.__version__}")
+    console.print(f"Author: { {{cookiecutter.module_abbreviation}}.__author__}")
+    console.print(f"Version: { {{cookiecutter.module_abbreviation}}.__version__}")
     if custom_message != "":
         console.print(f"Custom message: {custom_message}")
 
-@app.command() # Defines a default action
+@app.command('demo') # Defines a default action
 def run():
     """
-    Probably run the main function of the module
+    This is a demonstration function that shows how to use the module
     """
     print("Hello world!")
-    {{cookiecutter.project_slug}}.my_function()
+    {{cookiecutter.module_abbreviation}}.my_function()
     script_path = Path(os.path.abspath(__file__))
     parent_path = script_path.parent
     print("Script path:", script_path)
