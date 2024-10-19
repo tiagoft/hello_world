@@ -11,7 +11,7 @@ Remember to follow these instructions from within your preferred virtual environ
     conda create -n {{cookiecutter.project_slug}} python={{cookiecutter.python_version}}
     conda activate {{cookiecutter.project_slug}}
 
-The first way is to clone the repository and do a local installation:
+The first way  is to clone the repository and do a local installation:
 
     git clone https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.github_repository}}.git
     cd {{cookiecutter.github_repository}}
