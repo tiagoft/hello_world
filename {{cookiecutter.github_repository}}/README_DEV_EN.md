@@ -10,7 +10,7 @@ Run these instructions immediately after creating your project with cookiecutter
 
 2. Create a virtual environment for your development:
 
-        conda create -n {{cookiecutter.project_slug}} python={{cookiecutter.python_version}}
+        conda env create -f environment.yml
         conda activate {{cookiecutter.project_slug}}
 
 3. (optional) Install the `gh` app to automatically create your repository on GitHub:
