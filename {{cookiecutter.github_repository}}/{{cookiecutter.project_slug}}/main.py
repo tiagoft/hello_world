@@ -4,8 +4,7 @@ Made from cookiecutter template:
 cookiecutter gh:tiagoft/hello_world
 """
 
-import os
-from pathlib import Path
+import importlib.resources
 from rich.console import Console
 import typer
 {% if cookiecutter.project_slug == cookiecutter.module_abbreviation %}
@@ -35,13 +34,10 @@ def run():
     """
     print("Hello world!")
     {{cookiecutter.module_abbreviation}}.my_function()
-    script_path = Path(os.path.abspath(__file__))
-    parent_path = script_path.parent
-    print("Script path:", script_path)
-    with open(parent_path / "assets/poetry.txt", encoding='utf8') as file:
-        print(file.read())
-    with open(parent_path / "assets/test_folder/test_something.txt", encoding='utf8') as file:
-        print(file.read())
+    asset_file = importlib.resources.open_text('{{cookiecutter.module_abbreviation}}.assets', 'poetry.txt')
+    print(asset_file.read())
+    asset_file = importlib.resources.open_text('{{cookiecutter.module_abbreviation}}.assets.test_folder', 'test_something.txt')
+    print(asset_file.read())
 
 if __name__ == "__main__":
     app()
