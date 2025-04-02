@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "{{cookiecutter.project_slug}}"
+version = "0.0.1"
+description = "{{cookiecutter.module_description}}"
+authors = [
+  {name = "{{cookiecutter.author_name}}", email = "{{cookiecutter.author_email}}"}
+]
+dynamic = ["dependencies"]
+readme = "README.md"
+requires-python = ">={{ cookiecutter.python_version }}"
+
+[project.urls]
+Repository = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.module_name}}"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.package-data]
+{{cookiecutter.project_slug}} = ["assets/*"]
+
+[project.scripts]
+{{cookiecutter.project_slug}}-cli = "{{cookiecutter.project_slug}}.main:run"
