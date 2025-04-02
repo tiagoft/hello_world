@@ -13,6 +13,8 @@ import {{cookiecutter.project_slug}}
 import {{cookiecutter.project_slug}} as {{cookiecutter.module_abbreviation}}
 {% endif %}
 
+import {{cookiecutter.project_slug}}.my_lib
+
 app = typer.Typer(no_args_is_help=True)
 console = Console()
 
@@ -33,7 +35,7 @@ def run():
     This is a demonstration function that shows how to use the module
     """
     print("Hello world!")
-    {{cookiecutter.module_abbreviation}}.my_function()
+    {{cookiecutter.module_abbreviation}}.my_lib.my_function()
     asset_file = importlib.resources.open_text('{{cookiecutter.module_abbreviation}}.assets', 'poetry.txt')
     print(asset_file.read())
     asset_file = importlib.resources.open_text('{{cookiecutter.module_abbreviation}}.assets.test_folder', 'test_something.txt')
